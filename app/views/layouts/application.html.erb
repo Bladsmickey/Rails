@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App</title>
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<%= yield %>
+
+<script type="text/javascript" src="countUp.min.js"></script>
+<script>
+	var options = {
+  useEasing : true, 
+  useGrouping : true, 
+  separator : ',', 
+  decimal : '.', 
+  prefix : '', 
+  suffix : '' 
+};
+var demo = new CountUp("demo", 0, 100, 1, 100, options);
+demo.start();
+</script>
+
+
+</body>
+</html>
